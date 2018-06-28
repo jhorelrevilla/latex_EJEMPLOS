@@ -70,6 +70,9 @@ private:
     string color;
     figura *ptr;
 public:
+    conjuntodefiguras& operator +(const conjuntodefiguras &a){
+        this->color+=a.color;
+    };
     conjuntofiguras();
 };
 conjuntofiguras::conjuntofiguras()
