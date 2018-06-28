@@ -8,21 +8,21 @@ class CRender{
 };
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
+template<class T>
 class Pareja
 {
-    double a, b;
+    T a, b;
 
 public:
-    double getA();
-    double getB();
+    T getA(){ return a; }
+    T getB(){ return b; }
     void   setA(double n);
     void   setB(double n);
+    
 };
 
-double Pareja::getA() { return a; }
-double Pareja::getB() { return b; }
-void Pareja::setA(double n) { a = n; }
-void Pareja::setB(double n) { b = n; }
+void Pareja::setA(T n) { a = n; }
+void Pareja::setB(T n) { b = n; }
 
 class Suma::Public Pareja{
     double resultado;
@@ -64,7 +64,19 @@ public:
     cout << x * 0.5 * y << ".\n";
   }
 };
-
+class conjuntofiguras
+{
+private:
+    string color;
+    figura *ptr;
+public:
+    conjuntofiguras();
+};
+conjuntofiguras::conjuntofiguras()
+{
+    color="NULL";
+    ptr = new figura[0];
+}
 
 int main()
 {
